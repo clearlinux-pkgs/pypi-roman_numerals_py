@@ -5,17 +5,17 @@
 # autospec version: v21
 # autospec commit: e36a856
 #
-Name     : pypi-roman_nmumerals_py
+Name     : pypi-roman_numerals_py
 Version  : 3.0.0
-Release  : 2
+Release  : 3
 URL      : https://files.pythonhosted.org/packages/9e/78/9491ab144c9cb2d97aa74d6f632bd6f4be67957de03f945a23a67415d859/roman_numerals_py-3.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/9e/78/9491ab144c9cb2d97aa74d6f632bd6f4be67957de03f945a23a67415d859/roman_numerals_py-3.0.0.tar.gz
 Summary  : Manipulate well-formed Roman numerals
 Group    : Development/Tools
 License  : CC0-1.0
-Requires: pypi-roman_nmumerals_py-license = %{version}-%{release}
-Requires: pypi-roman_nmumerals_py-python = %{version}-%{release}
-Requires: pypi-roman_nmumerals_py-python3 = %{version}-%{release}
+Requires: pypi-roman_numerals_py-license = %{version}-%{release}
+Requires: pypi-roman_numerals_py-python = %{version}-%{release}
+Requires: pypi-roman_numerals_py-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(flit_core)
 # Suppress stripping binaries
@@ -29,30 +29,31 @@ roman-numerals
 A library for manipulating well-formed Roman numerals.
 
 %package license
-Summary: license components for the pypi-roman_nmumerals_py package.
+Summary: license components for the pypi-roman_numerals_py package.
 Group: Default
 
 %description license
-license components for the pypi-roman_nmumerals_py package.
+license components for the pypi-roman_numerals_py package.
 
 
 %package python
-Summary: python components for the pypi-roman_nmumerals_py package.
+Summary: python components for the pypi-roman_numerals_py package.
 Group: Default
-Requires: pypi-roman_nmumerals_py-python3 = %{version}-%{release}
+Requires: pypi-roman_numerals_py-python3 = %{version}-%{release}
 
 %description python
-python components for the pypi-roman_nmumerals_py package.
+python components for the pypi-roman_numerals_py package.
 
 
 %package python3
-Summary: python3 components for the pypi-roman_nmumerals_py package.
+Summary: python3 components for the pypi-roman_numerals_py package.
 Group: Default
 Requires: python3-core
 Provides: pypi(roman_numerals_py)
+Provides: pypi(roman_numerals_py)
 
 %description python3
-python3 components for the pypi-roman_nmumerals_py package.
+python3 components for the pypi-roman_numerals_py package.
 
 
 %prep
@@ -64,7 +65,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1739995098
+export SOURCE_DATE_EPOCH=1739995565
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -100,8 +101,8 @@ ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/package-licenses/pypi-roman_nmumerals_py
-cp %{_builddir}/roman_numerals_py-%{version}/LICENCE.rst %{buildroot}/usr/share/package-licenses/pypi-roman_nmumerals_py/f8fd26addbb6e1ffe7ee441a97060e4f8ac81419 || :
+mkdir -p %{buildroot}/usr/share/package-licenses/pypi-roman_numerals_py
+cp %{_builddir}/roman_numerals_py-%{version}/LICENCE.rst %{buildroot}/usr/share/package-licenses/pypi-roman_numerals_py/f8fd26addbb6e1ffe7ee441a97060e4f8ac81419 || :
 python3 -m installer --destdir=%{buildroot} dist/*.whl
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -112,7 +113,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/pypi-roman_nmumerals_py/f8fd26addbb6e1ffe7ee441a97060e4f8ac81419
+/usr/share/package-licenses/pypi-roman_numerals_py/f8fd26addbb6e1ffe7ee441a97060e4f8ac81419
 
 %files python
 %defattr(-,root,root,-)
