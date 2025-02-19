@@ -7,7 +7,7 @@
 #
 Name     : pypi-roman_nmumerals_py
 Version  : 3.0.0
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/9e/78/9491ab144c9cb2d97aa74d6f632bd6f4be67957de03f945a23a67415d859/roman_numerals_py-3.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/9e/78/9491ab144c9cb2d97aa74d6f632bd6f4be67957de03f945a23a67415d859/roman_numerals_py-3.0.0.tar.gz
 Summary  : Manipulate well-formed Roman numerals
@@ -49,6 +49,7 @@ python components for the pypi-roman_nmumerals_py package.
 Summary: python3 components for the pypi-roman_nmumerals_py package.
 Group: Default
 Requires: python3-core
+Provides: pypi(roman_numerals_py)
 
 %description python3
 python3 components for the pypi-roman_nmumerals_py package.
@@ -63,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1739989588
+export SOURCE_DATE_EPOCH=1739995098
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
